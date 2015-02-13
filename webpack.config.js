@@ -6,8 +6,8 @@ module.exports = {
         // vendor: ["jquery, angular"]
     },
     output: {
-        path: path.join(__dirname, "/dist"),
-         publicPath: '/app/',
+        path: "./dist",
+        publicPath: '/app/',
         filename: "bundle.js"
     },
     plugins: [
