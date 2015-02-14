@@ -8,10 +8,10 @@ module.exports = {
         vendor: ["./app/commons/angular", "./app/commons/jquery"]
     },
     output: {
-        path: "./dist",
-        publicPath: '/app/',
+        path: "./build",
+        // publicPath: '/app/',
         filename: "[name].bundle.js",
-        chunkFilename: "[id].chunk.js"
+        // chunkFilename: "[id].chunk.js"
     },
     plugins: [
         new CommonsChunkPlugin("vendor", "vendor.bundle.js")
