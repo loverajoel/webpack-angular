@@ -1,16 +1,19 @@
 var path = require("path");
+var webpack = require('("../../../../node_modules/webpack');
+var CommonsChunkPlugin = require("../../../../node_modules/webpack/lib/optimize/CommonsChunkPlugin");
 
 module.exports = {
     entry: {
         app: "./app/entry.js",
-        // vendor: ["jquery, angular"]
+        vendor: ["./app/commons/angular", "./app/commons/jquery"]
     },
     output: {
         path: "./dist",
         publicPath: '/app/',
-        filename: "bundle.js"
+        filename: "[name].bundle.js",
+        chunkFilename: "[id].chunk.js"
     },
     plugins: [
-        // new webpack.optimize.CommonsChunkPlugin( chunkName= "vendor",  filename= "vendor.bundle.js")
+        new CommonsChunkPlugin("vendor", "vendor.bundle.js")
     ]
 };

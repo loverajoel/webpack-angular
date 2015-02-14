@@ -1,1 +1,1 @@
-console.log('angular.js')
+console.log('jquery.js')
