@@ -11,7 +11,7 @@ var config = {
     },
     entry: {
         app: "./app/entry.js",
-        vendor: ["angular"]
+        vendor: ["angular", "angular-route"]
     },
     resolve: {
         alias: {}
@@ -30,6 +30,7 @@ var config = {
 };
 
 config.addVendor('angular', bower_dir + '/angular/angular.js');
+config.addVendor('angular-route', bower_dir + '/angular-route/angular-route.js');
 
 
 module.exports = config;
